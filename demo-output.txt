@@ -1,0 +1,42 @@
+Test GetMostRecentDateOnDayOfWeek()
+{0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat}
+
+Test 1: 4/20/2011 falls on a Wednesday. Most recent Thu is 4/14/2011.
+
+Test 2: 9/12/2011 falls on a Monday. Most recent Fri is 9/9/2011.
+
+Test 3: 4/20/2011 falls on a Wednesday. Most recent Wed is 4/13/2011.
+
+Test 4: 4/20/2011 falls on a Wednesday. Most recent Wed is 4/20/2011.
+
+
+Test GetNextFutureDateOnDayOfWeek()
+{0=Sun, 1=Mon, ..., 6=Sat}
+
+Test 5: 4/20/2011 falls on a Wednesday. Next future Tue is 4/26/2011.
+
+Test 6: 12/14/2011 falls on a Wednesday. Next future Mon is 12/19/2011.
+
+Test 7: 4/22/2011 falls on a Friday. Next future Fri is 4/29/2011.
+
+Test 8: 4/22/2011 falls on a Friday. Next future Fri is 4/22/2011.
+
+
+Test GetAdjacentWeekDateOnDayOfWeek()
+{0=Sun, 1=Mon, ..., 5=Fri, 6=Sat}
+
+Test 9: 4/22/2011 falls on a Friday. Prior Fri is 4/22/2011.
+
+Test 10: 4/22/2011 falls on a Friday. Following Fri is 4/22/2011.
+
+Test 11: 4/22/2011 falls on a Friday. Prior Fri is 4/15/2011.
+
+Test 12: 4/22/2011 falls on a Friday. Following Fri is 4/29/2011.
+
+Test 13: 4/23/2011 falls on a Saturday. Following Mon is 4/25/2011.
+
+Test 14: 4/23/2011 falls on a Saturday. Prior Mon is 4/18/2011.
+
+Test 15: 12/14/2011 falls on a Wednesday. Following Sun is 12/18/2011.
+
+Press ENTER
