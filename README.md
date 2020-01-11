@@ -1,7 +1,7 @@
 ### README
 # Get-MostRecent-Date-on-DayOfWeek
 
-.NET C# utility/helper function: Computes a new date that is on a given day of the week, relative to a reference date.
+#### .NET C# utility/helper function: Computes a new date that is on a given day of the week, relative to a reference date.
 ---
 Copyright (c) 2011-2020  Rich Giordano / Global Software Society
 
@@ -32,13 +32,14 @@ The function takes as primary arguments a reference date and a day of week.
 
 _Example 1:_
 
-Reference date = April 20, 2011.  This date happened to fall on a Wednesday.
+Reference date = April 20, 2011.  This date happened to fall on a Wednesday.<br />
 E.g., the operator wishes to find the most recent date, relative to that
 reference date, that falls on a Thursday.
 
-The DateTime variable 'd' contains the date 4/20/2011. Here is the method call:
+Here is the method call:
 ```
   DateTime x;
+  DateTime d = DateTime.Parse("4/20/2011");
   x = DateUtils.GetMostRecentDateOnDayOfWeek(d, System.DayOfWeek.Thursday);
 ```
 Returns the date 4/14/2011, which falls on a Thursday.
@@ -48,9 +49,9 @@ The method also accepts an integer for the day of week:<br />
 
 What if the operator wishes to find the most recent date that falls on a
 Wednesday.  Which Wednesday?  The reference date itself is a Wednesday.  Should
-it include that same reference date, or skip back to the prior Wednesday?
-The answer is The operator has a choice; There is an optional boolean parameter
- 'matchingDOWReturnsRefDate' that handles this. It defaults to false.
+it include that same reference date, or skip back to the prior Wednesday?<br />
+The answer is _The operator has a choice._ There is an optional boolean parameter
+ `matchingDOWReturnsRefDate` that handles this. It defaults to `false`.
 ```
   int w = 4;  // in place of System.DayOfWeek.Wednesday
   x = DateUtils.GetMostRecentDateOnDayOfWeek(d, w, true);  // returns 4/20/2011
@@ -61,7 +62,7 @@ Even though this project name includes "Get Most Recent...", other functions
 are included to get the Next Future date on a given day of the week. The method
 call and concept is similar.
 
-_Example 2, using the same reference date variable 'd' and value above:_
+_Example 2, using the same reference date parameter `d` and value above:_
 ```
   int tue = 2; 
   x = DateUtils.GetNextFutureDateOnDayOfWeek(d, tue);  // returns 4/26/2011
@@ -69,10 +70,10 @@ _Example 2, using the same reference date variable 'd' and value above:_
 Finally, there is another function form that allows getting either the Most
 Recent or the Next Future date by specifying an integer parameter to indicate
 which direction: a -1 for Most Recent or a 1 for Next Future.  In this form,
-the boolean 'matchingDOWReturnsRefDate' parameter is required and the
-'dayOfWeek' parameter allows only an integer.
+the boolean `matchingDOWReturnsRefDate` parameter is required and the
+`dayOfWeek` parameter allows only an integer.
 
-_Example 3, using the same reference date variable 'd' and value above:_
+_Example 3, using the same reference date parameter `d` and value above:_
 ```
   int dir = 1;  // Next Future date
   int fri = (int)System.DayOfWeek.Friday;
